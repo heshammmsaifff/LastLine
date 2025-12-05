@@ -18,12 +18,12 @@ export default function ServicesGrid() {
     {
       title: isRTL ? "السفر و السياحة" : "Travel & Tourism",
       image: "/travel.jpg",
-      link: "/travel",
+      link: "#",
     },
     {
       title: isRTL ? "الدعاية و الاعلان" : "Marketing & Advertising",
       image: "/marketing.jpg",
-      link: "/marketing",
+      link: "/media",
     },
   ];
 

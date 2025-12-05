@@ -242,7 +242,7 @@ export default function Navbar() {
                     <ul className="mt-2 flex flex-col space-y-1 pl-4">
                       <li>
                         <Link
-                          href="/Contracting"
+                          href="/contracting"
                           onClick={toggleMobile}
                           className="block px-4 py-2 rounded-lg text-sm text-white/80 hover:bg-[#E69647]/20 hover:text-[#E69647] transition-all duration-200"
                         >
