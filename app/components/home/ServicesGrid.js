@@ -29,7 +29,13 @@ export default function ServicesGrid() {
 
   return (
     <section className="w-full px-4 py-20 sm:px-8 lg:px-12">
-      <div className="mx-auto max-w-5xl text-center text-white">
+      <motion.div
+        className="mx-auto max-w-5xl text-center text-white"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+      >
         <h2 className="text-4xl font-bold">
           {isRTL ? "ماذا نقدم لك" : "What We Offer You"}
         </h2>
@@ -39,31 +45,50 @@ export default function ServicesGrid() {
             ? "نقدم مجموعة متنوعة من الخدمات لتلبية احتياجاتك المختلفة. سواء كنت تبحث عن مقاولات عامة، سفر وسياحة، أو دعاية وإعلان، نحن هنا لمساعدتك."
             : "We offer a variety of services to meet your diverse needs. Whether you're looking for general contracting, travel & tourism, or marketing & advertising, we're here to assist you."}
         </p>
-        <p className="mt-3 text-base text-white/80">
+
+        <motion.p
+          className="mt-3 text-base text-white/80"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+        >
           {isRTL
             ? "اختر الخدمة التي ترغب في استعراضها"
             : "Choose the service you want to explore"}
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
       <div className="mx-auto mt-12 grid max-w-6xl gap-10 md:grid-cols-3">
         {services.map((srv, i) => (
           <motion.article
             key={srv.title}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: i * 0.15 }}
-            className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.45)] backdrop-blur-lg"
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: i * 0.18 }}
+            whileHover={{
+              scale: 1.03,
+              translateY: -6,
+              transition: { duration: 0.25 },
+            }}
+            className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.45)] backdrop-blur-lg cursor-pointer"
           >
             {/* IMAGE */}
-            <div className="relative h-64 w-full overflow-hidden">
+            <motion.div
+              className="relative h-64 w-full overflow-hidden"
+              initial={{ scale: 1.05 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               <Image
                 src={srv.image}
                 alt={srv.title}
                 fill
                 className="object-cover transition duration-500 group-hover:scale-110"
               />
-            </div>
+            </motion.div>
 
             {/* CONTENT */}
             <div className="p-6 text-center">

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   const { t, language } = useLanguage();
@@ -45,26 +46,46 @@ export default function Hero() {
 
       {/* CONTENT CENTER */}
       <div className="relative z-20 flex flex-col items-center text-center text-white px-4 pt-16 sm:pt-20 lg:pt-28">
-        <p className="mt-12 text-sm sm:text-lg md:text-base font-semibold uppercase tracking-[0.3em] text-white/70">
+        <motion.p
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mt-12 text-sm sm:text-lg md:text-base font-semibold uppercase tracking-[0.3em] text-white/70"
+        >
           {t.heroBadge}
-        </p>
+        </motion.p>
 
-        <h1 className="mt-15 text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-[#FED8B1] max-w-4xl">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="mt-15 text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-[#FED8B1] max-w-4xl"
+        >
           {t.heroTitle}
-        </h1>
+        </motion.h1>
 
-        <p className="mt-15 text-xl sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl">
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="mt-15 text-xl sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl"
+        >
           {t.heroDescription.split("\n").map((line, i) => (
             <span key={i}>
               {line}
               <br />
             </span>
           ))}
-        </p>
+        </motion.p>
       </div>
 
       {/* CTA BOTTOM */}
-      <div className="relative mt-15 z-20 flex justify-center -mb-10 lg:-mb-14 pb-10 sm:pb-10 lg:pb-14">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.9, delay: 0.6 }}
+        className="relative mt-15 z-20 flex justify-center -mb-10 lg:-mb-14 pb-10 sm:pb-10 lg:pb-14"
+      >
         <Link
           href="#contact"
           className="transition-transform hover:scale-105"
@@ -80,7 +101,7 @@ export default function Hero() {
             priority
           />
         </Link>
-      </div>
+      </motion.div>
     </section>
   );
 }

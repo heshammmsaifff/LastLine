@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { motion } from "framer-motion";
 import { useLanguage } from "../../context/LanguageContext";
 import Image from "next/image";
 
@@ -52,17 +53,21 @@ export default function Highlights() {
           const side = isRTL ? "right-5" : "left-5";
 
           return (
-            <article
+            <motion.article
               key={card.key}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
               className={`relative overflow-hidden rounded-[51px] px-7 py-10 text-white border-[#E59647] ${borderSide}`}
             >
-              {/* Bottom small border */}
-              <span
+              {/* <span
                 className={`absolute bottom-0 ${bottomLineSide} h-[5px] w-[58px] bg-[#E59647] rounded-full`}
-              ></span>
+              ></span> */}
+
               <div
-                className={`absolute top-0 border-t-[5px] border-[#E59647] ${iconMargin} ${side} 
-  flex h-[97px] w-[97px] items-center justify-center rounded-full bg-[#F8BC79] text-black shadow-lg`}
+                className={`absolute top-0 border-t-[5px] border-[#E59647] ${iconMargin} ${side} border-b-[5px] border-l-[5px] border-r-[5px]
+                flex h-[97px] w-[97px] items-center justify-center rounded-full bg-[#F8BC79] text-black shadow-lg`}
               >
                 <Image
                   src={iconMap[card.key]}
@@ -79,7 +84,7 @@ export default function Highlights() {
                   {card.description}
                 </p>
               </div>
-            </article>
+            </motion.article>
           );
         })}
       </div>
