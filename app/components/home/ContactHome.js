@@ -11,7 +11,7 @@ export default function ContactHome() {
   const isRTL = language === "ar";
 
   return (
-    <section className="mt-30 w-full py-8 md:py-12 lg:py-20 px-4 sm:px-6 lg:px-8 flex justify-center">
+    <section className="bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)] z-10 w-full py-8 md:py-12 lg:py-20 px-4 sm:px-6 lg:px-8 flex justify-center">
       <div className="w-180 max-w-7xl flex flex-col md:flex-row items-center gap-6 md:gap-12">
         {/* Image + Button for medium/large screens */}
         <motion.div

@@ -17,7 +17,7 @@ export default function AboutShowcase() {
   const isRTL = language === "ar";
 
   return (
-    <section className="w-full px-4 py-20 sm:px-8 lg:px-12">
+    <section className="w-full px-4 py-20 sm:px-8 lg:px-12 bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)]">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 text-white lg:flex-row">
         {/* TEXT SIDE */}
         <motion.div

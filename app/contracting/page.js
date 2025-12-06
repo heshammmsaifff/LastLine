@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Info from "../components/contract/Info";
 import Features from "../components/contract/Features";
-import ContactContract from "../components/contract/ContactContract";
+import ContactHome from "../components/home/ContactHome";
 
 export default function page() {
   return (
@@ -16,7 +16,7 @@ export default function page() {
       <div className="relative z-10">
         <Info />
         <Features />
-        <ContactContract />
+        <ContactHome />
         <Footer />
       </div>
     </>

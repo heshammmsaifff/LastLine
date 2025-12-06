@@ -8,7 +8,7 @@ export default function Testimonials() {
   const isRTL = language === "ar";
 
   return (
-    <section className="w-full px-4 py-24 sm:px-8 lg:px-12">
+    <section className="w-full px-4 py-24 sm:px-8 lg:px-12 bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)]">
       {/* Title */}
       <motion.div
         className="mx-auto max-w-4xl text-center text-white"

@@ -70,7 +70,7 @@ work environment are essential to ensuring the highest quality in our services.`
 
   return (
     <>
-      <div className="mt-[150px]">
+      <div className="pt-[150px] bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)]">
         {/* Info Component */}
         <h2 className="text-center text-[30px] md:text-[40px] sm:text-[40px] font-bold mb-8 text-amber-600">
           {language == "ar" ? "مؤسسة الخط الأخير القابضة" : "Last Line Holding"}
@@ -124,7 +124,7 @@ work environment are essential to ensuring the highest quality in our services.`
             ? "الأساسي هو رضا العميل و بناء علاقات طويلة الأمد قائمة علي الثقة والتفاهم."
             : "is customer satisfaction and building long-term relationships based on trust and understanding."}
         </p>
-        <p className="max-w-4xl mx-auto text-lg md:text-xl sm:text-xl px-2 leading-[50px] mb-6">
+        <p className="max-w-4xl mx-auto text-lg md:text-xl sm:text-xl px-2 leading-[50px] pb-6">
           <span className="text-amber-600">
             &#9679; {language === "ar" ? "نؤمن" : "We believe"}{" "}
           </span>
@@ -133,7 +133,7 @@ work environment are essential to ensuring the highest quality in our services.`
             : "the importance of communicating with our clients and always welcome their feedback to ensure we provide the best possible services of the highest quality."}
         </p>
       </div>
-      <div className="mx-auto grid max-w-6xl mb-10 px-8 gap-8">
+      <div className="mx-auto grid  pb-10 px-8 gap-8 bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)]">
         {Object.entries(infoData).map(([key, box]) => (
           <article
             key={key}

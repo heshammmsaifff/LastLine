@@ -28,7 +28,7 @@ export default function ServicesGrid() {
   ];
 
   return (
-    <section className="w-full px-4 py-20 sm:px-8 lg:px-12">
+    <section className="w-full px-4 py-20 sm:px-8 lg:px-12 bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)]">
       <motion.div
         className="mx-auto max-w-5xl text-center text-white"
         initial={{ opacity: 0, y: 40 }}

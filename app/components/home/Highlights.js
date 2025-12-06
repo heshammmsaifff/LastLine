@@ -47,7 +47,7 @@ export default function Highlights() {
   const iconMargin = isRTL ? "-mr-6" : "-ml-6";
 
   return (
-    <section className="w-full px-4 py-16 sm:px-6 lg:px-10">
+    <section className="w-full px-4 py-16 sm:px-6 lg:px-10 bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)]">
       <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
         {cards.map((card, index) => {
           const side = isRTL ? "right-5" : "left-5";

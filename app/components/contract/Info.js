@@ -82,7 +82,7 @@ export default function Info() {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10">
+    <section className="w-full mx-auto px-4 py-10 bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)]">
       <div className="text-center mt-10 mb-30 ">
         <h2 className="text-[#FC8E1C] lg:text-[60px] md:text-[50px] sm:text-[40px] text-[20px] mb-10">
           {language == "ar"

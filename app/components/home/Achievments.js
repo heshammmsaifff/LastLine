@@ -20,7 +20,7 @@ export default function Achievments() {
   ];
 
   return (
-    <section className="relative w-full min-h-[400px] sm:min-h-[500px] lg:min-h-[650px] overflow-hidden">
+    <section className="bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)] z-50 relative w-full min-h-[400px] sm:min-h-[500px] lg:min-h-[650px] ">
       <Image
         src="/ach-bg.svg"
         alt="background"

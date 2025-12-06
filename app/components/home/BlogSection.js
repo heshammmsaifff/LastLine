@@ -41,7 +41,7 @@ export default function BlogCarouselFull() {
   const currentBlog = blogs[currentIndex];
 
   return (
-    <div className="relative w-full py-16">
+    <div className="relative w-full py-16 bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)]">
       <h2 className="text-4xl font-bold text-center mb-10 text-amber-300">
         {language === "ar" ? "المدونة" : "Blog"}
       </h2>

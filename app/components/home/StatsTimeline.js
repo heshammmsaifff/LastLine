@@ -1,38 +1,41 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "../../context/LanguageContext";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function StatsTimeline() {
   const { t, language } = useLanguage();
   const isRTL = language === "ar";
 
-  const items = t.stats.items;
+  const items = t.stats.items || [];
   const sectionRef = useRef(null);
 
-  const isInView = useInView(sectionRef, {
-    once: true,
-    margin: "-200px",
-  });
-
-  const controls = useAnimation();
+  // Trigger animate on language change
+  const [animateTrigger, setAnimateTrigger] = useState(false);
 
   useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [isInView]);
+    // reset animation then trigger
+    setAnimateTrigger(false);
+    const timeout = setTimeout(() => setAnimateTrigger(true), 50);
+    return () => clearTimeout(timeout);
+  }, [language]);
+
+  // Variants
+  const titleVariants = {
+    hidden: { opacity: 0, y: 35 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  };
 
   const containerVariants = {
     hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
+    visible: { transition: { staggerChildren: 0.15 } },
   };
 
   const itemVariants = {
@@ -46,12 +49,17 @@ export default function StatsTimeline() {
   };
 
   return (
-    <section ref={sectionRef} className="w-full px-4 py-20 sm:px-8 lg:px-12">
+    <section
+      key={language} // remount section on language change
+      ref={sectionRef}
+      className="w-full px-4 py-20 sm:px-8 lg:px-12 bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)]"
+    >
       {/* Title */}
       <motion.div
-        initial={{ opacity: 0, y: 35 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+        key={`title-${language}`}
+        initial="hidden"
+        animate={animateTrigger ? "visible" : "hidden"}
+        variants={titleVariants}
         className="mx-auto max-w-5xl text-center text-white"
       >
         <h2 className="text-4xl font-bold">{t.stats.heading}</h2>
@@ -60,21 +68,17 @@ export default function StatsTimeline() {
 
       {/* Items */}
       <motion.div
-        variants={containerVariants}
+        key={`items-${language}`}
         initial="hidden"
-        animate={controls}
+        animate={animateTrigger ? "visible" : "hidden"}
+        variants={containerVariants}
         className="mx-auto mt-12 flex max-w-5xl flex-col gap-8"
       >
         {items.map((item, idx) => (
           <motion.article
-            key={item.title}
+            key={`${item.title}-${idx}-${language}`}
             variants={itemVariants}
-            className="
-              relative flex flex-col gap-3 rounded-3xl border border-white/10 
-              bg-white/5 px-6 py-6 text-white 
-              shadow-[0_25px_80px_-50px_rgba(0,0,0,0.8)] 
-              backdrop-blur-xl overflow-hidden
-            "
+            className="relative flex flex-col gap-3 rounded-3xl border border-white/10 bg-white/5 px-6 py-6 text-white shadow-[0_25px_80px_-50px_rgba(0,0,0,0.8)] backdrop-blur-xl overflow-hidden"
           >
             {/* Glow */}
             <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-[#F4A65A]/10 to-transparent blur-2xl" />
@@ -86,17 +90,20 @@ export default function StatsTimeline() {
               }`}
             >
               <p className="text-2xl font-bold">{item.title}</p>
-
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={
-                  isInView
+                  animateTrigger
                     ? {
                         scale: 1,
                         opacity: 1,
-                        transition: { delay: idx * 0.15 },
+                        transition: {
+                          delay: idx * 0.15,
+                          duration: 0.7,
+                          ease: "easeOut",
+                        },
                       }
-                    : {}
+                    : { scale: 0.8, opacity: 0 }
                 }
                 className="flex items-center gap-2 rounded-2xl bg-[#F4A65A]/90 px-4 py-2 text-lg font-semibold text-black shadow"
               >
@@ -115,11 +122,10 @@ export default function StatsTimeline() {
 
             {/* Progress Bar */}
             <div className="relative mt-2 h-4 overflow-hidden rounded-full bg-white/20">
-              {/* bar */}
               <motion.span
                 initial={{ width: "0%" }}
                 animate={
-                  isInView
+                  animateTrigger
                     ? {
                         width: `${item.progress}%`,
                         transition: {
@@ -128,30 +134,10 @@ export default function StatsTimeline() {
                           delay: idx * 0.15,
                         },
                       }
-                    : {}
+                    : { width: "0%" }
                 }
                 className="absolute inset-y-0 rounded-full bg-gradient-to-r from-[#F4A65A] to-[#F18B32]"
               />
-
-              {/* indicator circle */}
-              {/* <motion.span
-                initial={{ x: -20, opacity: 0 }}
-                animate={
-                  isInView
-                    ? {
-                        x: `calc(${item.progress}% - 10px)`,
-                        opacity: 1,
-                        transition: {
-                          duration: 1.4,
-                          ease: [0.34, 1.56, 0.64, 1],
-                          delay: idx * 0.18,
-                        },
-                      }
-                    : {}
-                }
-                className="absolute top-1/2 h-5 w-5 -translate-y-1/2 rounded-full border-4 border-black/40 bg-[#F4A65A]"
-                style={{ left: 0 }}
-              /> */}
             </div>
           </motion.article>
         ))}
@@ -159,9 +145,17 @@ export default function StatsTimeline() {
 
       {/* CTA Button */}
       <motion.div
+        key={`cta-${language}`}
         initial={{ opacity: 0, y: 40 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        animate={
+          animateTrigger
+            ? {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.8, ease: "easeOut", delay: 0.2 },
+              }
+            : { opacity: 0, y: 40 }
+        }
         className="mt-12 flex justify-center"
       >
         <Link

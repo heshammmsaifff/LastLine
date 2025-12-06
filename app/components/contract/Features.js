@@ -7,7 +7,7 @@ export default function Features() {
   const { language } = useLanguage();
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16">
+    <section className="w-full mx-auto px-4 py-16 bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)]">
       {/* Title */}
       <h3 className={"text-4xl font-bold align-middle text-center mb-12 "}>
         {language === "ar" ? "ما يميزنا" : "What Makes Us Special"}

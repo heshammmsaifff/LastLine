@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Hero from "../components/media/Hero";
 import Info from "../components/media/Info";
+import Services from "../components/media/Services";
+import ContactHome from "../components/home/ContactHome";
 
 export default function page() {
   return (
@@ -13,6 +15,8 @@ export default function page() {
       </div>
       <div className="relative z-10">
         <Info />
+        <Services />
+        <ContactHome />
         <Footer />
       </div>
     </>
