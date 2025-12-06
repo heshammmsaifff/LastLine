@@ -61,25 +61,25 @@ export default function Services() {
             dir === "rtl" ? "lg:flex-row" : "lg:flex-row-reverse"
           } justify-between items-start lg:items-center mb-12`}
         >
-          {/* <div className="p-4 w-full lg:w-auto text-center lg:text-start"> */}
-          <div className="relative inline-block">
-            <span className="absolute inset-0 bg-amber-500 -rotate-8 rounded-lg"></span>
-            <h2
-              className={`relative text-black font-extrabold text-5xl md:text-6xl lg:text-[80px] leading-tight ${
-                language === "ar" ? "text-right" : "text-left"
-              }`}
-            >
-              {language === "ar"
-                ? "خـدمـاتـنــا الإحترافية"
-                : "Our professional services"}
-            </h2>
+          <div className="p-4 w-full lg:w-auto text-center lg:text-start">
+            <div className="relative inline-block">
+              <span className="absolute inset-0 bg-amber-500 -rotate-7 rounded-[15px]"></span>
+              <h2
+                className={`relative text-black font-extrabold text-5xl md:text-6xl lg:text-[80px] leading-tight ${
+                  language === "ar" ? "text-right" : "text-left"
+                }`}
+              >
+                {language === "ar"
+                  ? "خـدمـاتـنــا الإحترافية"
+                  : "Our professional services"}
+              </h2>
+            </div>
           </div>
-          {/* </div> */}
 
           <div className="h-50 w-1 bg-amber-500 hidden lg:block mx-8 shrink-0"></div>
 
           <div
-            className={`max-w-md p-4 mt-4 lg:mt-0 w-full lg:w-auto text-center ${textAlignmentClass}`}
+            className={`max-w-md  p-4 mt-4 lg:mt-0 w-full lg:w-auto text-center ${textAlignmentClass}`}
           >
             {" "}
             <p className="text-black font-semibold text-lg md:text-xl leading-relaxed">

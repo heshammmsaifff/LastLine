@@ -86,7 +86,7 @@ export default function Footer() {
             {language === "ar" ? "المشاريع" : "Projects"}
           </Link>
 
-          <Link href="#" className="hover:text-gray-600">
+          <Link href="/contact" className="hover:text-gray-600">
             {language === "ar" ? "تواصل معنا الآن" : "Contact Us"}
           </Link>
 

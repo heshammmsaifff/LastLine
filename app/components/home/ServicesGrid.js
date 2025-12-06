@@ -18,7 +18,7 @@ export default function ServicesGrid() {
     {
       title: isRTL ? "السفر و السياحة" : "Travel & Tourism",
       image: "/travel.jpg",
-      link: "#",
+      link: "/travel",
     },
     {
       title: isRTL ? "الدعاية و الاعلان" : "Marketing & Advertising",

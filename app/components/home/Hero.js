@@ -87,7 +87,7 @@ export default function Hero() {
         className="relative mt-15 z-20 flex justify-center -mb-10 lg:-mb-14 pb-10 sm:pb-10 lg:pb-14"
       >
         <Link
-          href="#contact"
+          href="/contact"
           className="transition-transform hover:scale-105"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}

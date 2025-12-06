@@ -85,7 +85,7 @@ export default function Navbar() {
                     </li>
                     <li>
                       <Link
-                        href="#"
+                        href="/travel"
                         className="block px-4 py-2 hover:bg-white/20 hover:text-black"
                       >
                         {t.navTravel}
@@ -98,7 +98,7 @@ export default function Navbar() {
 
             <li>
               <Link
-                href="#"
+                href="/about"
                 className="hover:text-[#FDC081] hover:border-b-2 hover:border-[#FDC081] pb-3 transition"
               >
                 {t.navAbout}
@@ -123,7 +123,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="#"
+                href="/contact"
                 className="hover:text-[#FDC081] hover:border-b-2 hover:border-[#FDC081] pb-3 transition"
               >
                 {t.navContact}
@@ -262,7 +262,7 @@ export default function Navbar() {
 
                       <li>
                         <Link
-                          href="#"
+                          href="/travel"
                           onClick={toggleMobile}
                           className="block px-4 py-2 rounded-lg text-sm text-white/80 hover:bg-[#E69647]/20 hover:text-[#E69647] transition-all duration-200"
                         >
@@ -275,7 +275,7 @@ export default function Navbar() {
 
                 <li>
                   <Link
-                    href="#"
+                    href="/about"
                     onClick={toggleMobile}
                     className="block px-4 py-3 rounded-lg text-base font-semibold text-white hover:bg-[#E69647]/20 hover:text-[#E69647] transition-all duration-200"
                   >
