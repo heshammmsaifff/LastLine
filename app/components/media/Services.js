@@ -6,6 +6,8 @@ import { RiAdvertisementLine } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 
 const servicesData = [
   {
@@ -38,7 +40,21 @@ const servicesData = [
     titleEn: "Service 4",
     descriptionAr: "وصف الخدمة الرابعة باللغة العربية.",
     descriptionEn: "Description of the fourth service in English.",
+    icon: FaFacebookF({ size: 40, color: "#000" }),
+  },
+  {
+    titleAr: "خدمة 5",
+    titleEn: "Service 5",
+    descriptionAr: "وصف الخدمة الخامسة باللغة العربية.",
+    descriptionEn: "Description of the fifth service in English.",
     icon: FaFacebookSquare({ size: 40, color: "#000" }),
+  },
+  {
+    titleAr: "خدمة 6",
+    titleEn: "Service 6",
+    descriptionAr: "وصف الخدمة السادسة باللغة العربية.",
+    descriptionEn: "Description of the sixth service in English.",
+    icon: FaCode({ size: 40, color: "#000" }),
   },
 ];
 
