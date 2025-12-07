@@ -38,7 +38,7 @@ export default function Hero() {
         <h1 className="mb-10 text-[40px] sm:text-4xl md:text-6xl lg:text-7xl xl:text-6xl font-bold text-[#FED8B1] max-w-4xl">
           {language == "ar"
             ? "الخط الأخير القابضة للمقاولات"
-            : "The long line of contractors"}
+            : "The last line for contracting"}
         </h1>
         <h2 className="text-[32px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-bold text-amber-300 max-w-4xl leading-snug">
           {language === "ar" ? "شـــريـــكــكــم" : "Your Partner"}

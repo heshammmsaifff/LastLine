@@ -133,7 +133,7 @@ work environment are essential to ensuring the highest quality in our services.`
             : "the importance of communicating with our clients and always welcome their feedback to ensure we provide the best possible services of the highest quality."}
         </p>
       </div>
-      <div className="mx-auto grid pb-10 px-20 gap-8 bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)]">
+      <div className="mx-auto grid pb-10 px-8 gap-8 bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)]">
         {Object.entries(infoData).map(([key, box]) => (
           <article
             key={key}
