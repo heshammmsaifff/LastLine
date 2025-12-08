@@ -85,6 +85,19 @@ export default function BlogCarouselFull() {
         </AnimatePresence>
       </div>
 
+      {/* dots للتنقل بين المدونات */}
+      <div className="flex justify-center mt-6 space-x-2">
+        {blogs.map((_, idx) => (
+          <button
+            key={idx}
+            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+              idx === currentIndex ? "bg-amber-300" : "bg-white/50"
+            }`}
+            onClick={() => setCurrentIndex(idx)}
+          ></button>
+        ))}
+      </div>
+
       <div className="text-center mt-10">
         <Link
           href="/blog"

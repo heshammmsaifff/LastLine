@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Main from "../components/contact/Main";
+import ContactForm from "../components/contact/ContactForm";
 
 export default function page() {
   return (
@@ -11,7 +11,7 @@ export default function page() {
         <div className="h-50"></div>
       </div>
       <div className="relative z-10">
-        <Main />
+        <ContactForm />
         <Footer />
       </div>
     </>

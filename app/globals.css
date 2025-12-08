@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .hero-bg {
-  background: linear-gradient(135deg, #000000 0%, #3b2b1a 40%, #6b4e2e 100%);
+  background: linear-gradient(135deg, #000000 0%, #3b2b1a 95%, #6b4e2e 100%);
 }
 
 /* bg-[radial-gradient(circle,#3b2b1a_0%,#1e150d_60%,#000000_100%)] */

@@ -65,12 +65,12 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute right-0 mt-2 w-55 bg-white/40 border-gray-900 rounded-lg shadow-lg py-2 animate-fade-slide-down"
+                    className="absolute right-0 mt-2 w-55 bg-black/90 border-gray-900 rounded-lg shadow-lg py-2 animate-fade"
                   >
                     <li>
                       <Link
                         href="/contracting"
-                        className="block px-4 py-2 hover:bg-white/20 hover:text-black"
+                        className="block px-4 py-2 hover:bg-white/20 hover:border-2 hover:rounded-3xl hover:animate-pulse hover:text-black"
                       >
                         {t.navContracting}
                       </Link>
@@ -78,7 +78,7 @@ export default function Navbar() {
                     <li>
                       <Link
                         href="/media"
-                        className="block px-4 py-2 hover:bg-white/20 hover:text-black"
+                        className="block px-4 py-2 hover:bg-white/20 hover:border-2 hover:rounded-3xl hover:animate-pulse hover:text-black"
                       >
                         {t.navAdvertising}
                       </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
                     <li>
                       <Link
                         href="/travel"
-                        className="block px-4 py-2 hover:bg-white/20 hover:text-black"
+                        className="block px-4 py-2 hover:bg-white/20 hover:border-2 hover:rounded-3xl hover:animate-pulse hover:text-black"
                       >
                         {t.navTravel}
                       </Link>
