@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../../lib/supabase";
 import Link from "next/link";
-import Navbar from "../components/Navbar"; // استبدل بالمسار الصحيح للNavbar
-import Footer from "../components/Footer"; // استبدل بالمسار الصحيح للFooter
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function ProjectsPage() {
@@ -46,13 +46,13 @@ export default function ProjectsPage() {
       {/* Navbar */}
       <Navbar />
 
-      {/* الصفحة */}
+      {/* page */}
       <main className="p-8 max-w-7xl mx-auto min-h-screen mt-30">
         <h1 className="text-4xl mb-10 font-bold mb-8 text-amber-300 text-center">
           {language === "ar" ? "المشاريع" : "Projects"}
         </h1>
 
-        {/* أزرار الفلترة */}
+        {/* filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           {categories.map((cat) => (
             <button
@@ -69,7 +69,7 @@ export default function ProjectsPage() {
           ))}
         </div>
 
-        {/* شبكة المشاريع */}
+        {/* projects */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.length === 0 && (
             <p className="text-center col-span-full text-white/70">

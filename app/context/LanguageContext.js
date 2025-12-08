@@ -238,14 +238,14 @@ export function LanguageProvider({ children }) {
     [language]
   );
 
-  const whatsappNumber = "201092141964"; // الرقم مع كود مصر
+  const whatsappNumber = "201092141964"; // number with code without +
   const whatsappMessage = encodeURIComponent(value.t.fabMessage);
 
   return (
     <LanguageContext.Provider value={value}>
       {children}
 
-      {/* زر تغيير اللغة */}
+      {/* change lang bottom */}
       <button
         type="button"
         onClick={toggleLanguage}

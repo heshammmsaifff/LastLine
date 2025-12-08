@@ -8,7 +8,6 @@ export default function page() {
   return (
     <>
       <div>
-        {/* content */}
         <div className="relative">
           <Navbar />
           <div className="h-50"></div>

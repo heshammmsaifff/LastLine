@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { useLanguage } from "../../context/LanguageContext";
-import { supabase } from "../../../lib/supabase"; // استدعاء الإعدادات مباشرة
+import { supabase } from "../../../lib/supabase";
 
 export default function ContactForm() {
   const { language } = useLanguage();

@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "../context/LanguageContext";
 
-// استدعاء Navbar و Footer
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -30,7 +29,7 @@ export default function BlogsPage() {
 
   return (
     <>
-      <Navbar /> {/* هنا Navbar */}
+      <Navbar /> {/* Navbar */}
       <div className="py-16 mt-15 px-4 max-w-7xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-amber-300 mb-12">
           {language === "ar" ? "المدونة" : "Blog"}
@@ -77,7 +76,7 @@ export default function BlogsPage() {
           ))}
         </div>
       </div>
-      <Footer /> {/* هنا Footer */}
+      <Footer /> {/* Footer */}
     </>
   );
 }

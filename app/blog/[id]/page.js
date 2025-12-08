@@ -9,7 +9,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
 export default function BlogDetail() {
-  const { id } = useParams(); // أخذ id من الرابط
+  const { id } = useParams();
   const { language } = useLanguage();
   const [blog, setBlog] = useState(null);
 

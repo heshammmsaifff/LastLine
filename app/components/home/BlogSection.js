@@ -25,7 +25,6 @@ export default function BlogCarouselFull() {
     fetchBlogs();
   }, []);
 
-  // التنقل التلقائي كل 4 ثواني
   useEffect(() => {
     if (blogs.length <= 1) return;
 
@@ -85,7 +84,7 @@ export default function BlogCarouselFull() {
         </AnimatePresence>
       </div>
 
-      {/* dots للتنقل بين المدونات */}
+      {/* dots */}
       <div className="flex justify-center mt-6 space-x-2">
         {blogs.map((_, idx) => (
           <button

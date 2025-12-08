@@ -70,14 +70,13 @@ export default function Achievments() {
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center mt-12">
           {stats.map((stat, idx) => {
-            // زاوية عشوائية بين -6 و 6 درجات
             const randomRotate = Math.floor(Math.random() * 13) - 9;
 
             return (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 50, rotate: 0 }} // تبدأ مستقيمة
-                whileInView={{ opacity: 1, y: 0, rotate: randomRotate }} // تتحول لزاوية عشوائية
+                initial={{ opacity: 0, y: 50, rotate: 0 }}
+                whileInView={{ opacity: 1, y: 0, rotate: randomRotate }}
                 transition={{ duration: 0.8, delay: 0.2 * idx }}
                 viewport={{ once: true }}
                 className="relative w-[220px] h-[250px] bg-[#F3BE86] rounded-md shadow-md flex flex-col items-center justify-center"

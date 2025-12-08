@@ -48,7 +48,7 @@ export default function ProjectPage() {
           {language === "ar" ? project.title_ar : project.title_en}
         </h1>
 
-        {/* سلايدر الصور */}
+        {/* slider */}
         <div className="relative w-full max-w-4xl mx-auto mt-10">
           <div className="relative w-full h-[400px] sm:h-[550px] overflow-hidden rounded-2xl">
             <Image
@@ -59,7 +59,7 @@ export default function ProjectPage() {
             />
           </div>
 
-          {/* زر يمين */}
+          {/* right */}
           {project.images.length > 1 && (
             <button
               onClick={() =>
@@ -71,7 +71,7 @@ export default function ProjectPage() {
             </button>
           )}
 
-          {/* زر شمال */}
+          {/* left */}
           {project.images.length > 1 && (
             <button
               onClick={() =>
@@ -86,7 +86,7 @@ export default function ProjectPage() {
             </button>
           )}
 
-          {/* النقاط */}
+          {/* points */}
           <div className="flex justify-center mt-4 space-x-2">
             {project.images.map((_, i) => (
               <div

@@ -33,7 +33,7 @@ export default function VisionMission() {
             ? "إن رؤيتنا ورسالتنا تدفعنا نحو الابتكار والتقدم، لتشكيل مستقبل مزدهر"
             : "our Vision and Mission drive us towards innovation and progress, shaping a prosperous future."}
         </h2>
-        {/* ===== Grid Vision & Mission ===== */}
+        {/*Grid Vision & Mission*/}
         <div className="grid md:grid-cols-2 gap-12">
           {/* Vision */}
           <div
@@ -95,7 +95,7 @@ export default function VisionMission() {
           </div>
         </div>
 
-        {/* ===== Values Section ===== */}
+        {/*Values Section*/}
         <div className="mt-20">
           <h2 className="text-3xl font-bold text-center mb-12 leading-relaxed">
             {language === "ar"

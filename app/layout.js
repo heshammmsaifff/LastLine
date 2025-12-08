@@ -1,4 +1,3 @@
-// app/layout.js
 import "./globals.css";
 import { Alexandria } from "next/font/google";
 import { LanguageProvider } from "./context/LanguageContext";
