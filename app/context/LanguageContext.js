@@ -1,6 +1,11 @@
 "use client";
 
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
+import { FiPlus } from "react-icons/fi";
 
 const translations = {
   ar: {
@@ -16,7 +21,6 @@ const translations = {
     heroTitle: "مؤسسة الخط الأخير القابضة",
     heroDescription:
       "مرحباً بكم في مؤسسة الخط الأخير\nنقدم أفضل الحلول في المقاولات العامة، الدعاية والإعلان، والسفر والسياحة.",
-
     heroCTA: "ابدأ الآن",
     heroBadge: "مستقبل البناء يبدأ من هنا",
     heroImageAlt: "واجهة برج معماري حديث",
@@ -103,6 +107,7 @@ const translations = {
       heading: "سابقة الأعمال",
       sub: "بعض المشاريع",
     },
+    fabMessage: "مرحبا، أود التواصل معكم",
   },
   en: {
     navHome: "Home",
@@ -206,6 +211,7 @@ const translations = {
       heading: "Previous work",
       sub: "Some projects",
     },
+    fabMessage: "Hello, I want to contact you",
   },
 };
 
@@ -217,6 +223,7 @@ const LanguageContext = createContext({
 
 export function LanguageProvider({ children }) {
   const [language, setLanguage] = useState("ar");
+  const [fabOpen, setFabOpen] = useState(false);
 
   const toggleLanguage = () =>
     setLanguage((prev) => (prev === "ar" ? "en" : "ar"));
@@ -231,27 +238,68 @@ export function LanguageProvider({ children }) {
     [language]
   );
 
+  const whatsappNumber = "201092141964"; // الرقم مع كود مصر
+  const whatsappMessage = encodeURIComponent(value.t.fabMessage);
+
   return (
     <LanguageContext.Provider value={value}>
       {children}
+
+      {/* زر تغيير اللغة */}
       <button
         type="button"
         onClick={toggleLanguage}
         aria-label={value.t.floatingToggleAria}
         className="
-    fixed top-1/4 -translate-y-1/2
-    -left-7 sm:-left-7
-    z-60
-    bg-white/50
-    text-black font-semibold
-    py-3 px-8 sm:px-8
-    rounded-r-full
-    shadow-lg shadow-black/25
-    transition hover:bg-gray-600
-  "
+          fixed top-1/4 -translate-y-1/2
+          -left-7 sm:-left-7
+          z-60
+          bg-white/50
+          text-black font-semibold
+          py-3 px-8 sm:px-8
+          rounded-r-full
+          shadow-lg shadow-black/25
+          transition hover:bg-gray-600
+        "
       >
         {value.t.floatingToggle}
       </button>
+
+      {/* FAB العائم */}
+      <div className="fixed bottom-10 right-10 z-50 flex flex-col items-end">
+        <button
+          onClick={() => setFabOpen((prev) => !prev)}
+          className="w-16 h-16 rounded-full bg-amber-500 text-black flex items-center justify-center shadow-lg hover:bg-amber-600 transition relative z-50"
+        >
+          <FiPlus className="text-3xl" />
+        </button>
+
+        <AnimatePresence>
+          {fabOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              className="flex flex-col items-end mb-4 space-y-4 absolute bottom-full right-0"
+            >
+              <Link
+                href="/contact"
+                className="bg-white text-black p-3 rounded-full shadow hover:bg-gray-200 transition text-2xl flex items-center justify-center"
+              >
+                <HiOutlineMail />
+              </Link>
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 text-white p-3 rounded-full shadow hover:bg-green-600 transition text-2xl flex items-center justify-center"
+              >
+                <FaWhatsapp />
+              </a>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </LanguageContext.Provider>
   );
 }
