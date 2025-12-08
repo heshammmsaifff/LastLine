@@ -47,7 +47,7 @@ export default function ProjectsPage() {
       <Navbar />
 
       {/* الصفحة */}
-      <main className="p-8 max-w-7xl mx-auto h-screen mt-30">
+      <main className="p-8 max-w-7xl mx-auto min-h-screen mt-30">
         <h1 className="text-4xl mb-10 font-bold mb-8 text-amber-300 text-center">
           {language === "ar" ? "المشاريع" : "Projects"}
         </h1>
