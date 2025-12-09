@@ -22,7 +22,7 @@ export default function ServicesGrid() {
     },
     {
       title: isRTL ? "الدعاية و الاعلان" : "Marketing & Advertising",
-      image: "/media.jpg",
+      image: "/media3.jpg",
       link: "/media",
     },
   ];
