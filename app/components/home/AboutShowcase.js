@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 import { useLanguage } from "../../context/LanguageContext";
 
 const galleryImages = [
-  { src: "/Rectangle34.png", alt: "Gallery tower 1" },
-  { src: "/Rectangle35.png", alt: "Gallery tower 2" },
-  { src: "/Rectangle36.png", alt: "Gallery tower 3" },
+  { src: "/comp.jpg", alt: "Gallery tower 1" },
+  { src: "/stairs.jpg", alt: "Gallery tower 2" },
+  { src: "/building.jpg", alt: "Gallery tower 3" },
 ];
 
 export default function AboutShowcase() {

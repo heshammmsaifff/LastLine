@@ -21,7 +21,7 @@ export default function WhyUs() {
         <img
           src="/plane.png"
           alt="Airplane"
-          className="-mb-1 w-30 h-30 object-cover animate-bounce"
+          className="mb-9 w-30 h-30 object-cover animate-none"
         />
         {/* Feature 1 */}
         <div className="w-[90%] rotate-2 lg:w-1/2 rounded-[20px] p-[3px] bg-gradient-to-r from-[#FC8E1C] via-[#FED8B1] to-[#FC8E1C] shadow-lg">
@@ -29,7 +29,13 @@ export default function WhyUs() {
 
           <div className="bg-black/70 backdrop-blur-md w-full h-full rounded-[17px] p-6 text-center text-white">
             <div className="absolute -top-5 -left-5 w-12 h-12 rounded-full p-1 bg-gradient-to-r from-[#FC8E1C] via-[#FED8B1] to-[#FC8E1C]">
-              <div className="bg-black/70 w-full h-full rounded-full"></div>
+              <div className="bg-black/70 w-full h-full rounded-full">
+                <img
+                  src="/plane.png"
+                  alt="Airplane"
+                  className="w-7 pt-1.5 mr-1.5 h-auto object-cover"
+                />
+              </div>
             </div>
             <h3 className="text-xl font-semibold mb-4">
               {language === "ar" ? "رحلات مضمونة ومجربة" : "Guaranteed Trips"}
@@ -46,15 +52,23 @@ export default function WhyUs() {
           {/* Content */}
           <div className="bg-black/70 backdrop-blur-md w-full h-full rounded-[17px] p-6 text-center text-white">
             <div className="absolute -top-5 -right-5 w-12 h-12 rounded-full p-1 bg-gradient-to-r from-[#FC8E1C] via-[#FED8B1] to-[#FC8E1C]">
-              <div className="bg-black/70 w-full h-full rounded-full"></div>
+              <div className="bg-black/70 w-full h-full rounded-full">
+                <img
+                  src="/plane.png"
+                  alt="Airplane"
+                  className="w-7 pt-1.5 mr-1.5 h-auto object-cover"
+                />
+              </div>
             </div>
             <h3 className="text-xl font-semibold mb-4">
-              {language === "ar" ? "الخدمة الثانية" : "Second Feature"}
+              {language === "ar"
+                ? "معاك علي مدار الساعة"
+                : "With You Around the Clock"}
             </h3>
             <p>
               {language === "ar"
-                ? "وصف الخدمة الثانية"
-                : "Description of Second Feature"}
+                ? "فريق دعم متوفر لمساعدتك أثناء الرحلة وقبلها"
+                : "A support team available to assist you during and before the trip."}
             </p>
           </div>
         </div>
@@ -63,15 +77,21 @@ export default function WhyUs() {
           {/* Content */}
           <div className="bg-black/70 backdrop-blur-md w-full h-full rounded-[17px] p-6 text-center text-white">
             <div className="absolute -top-5 -left-5 w-12 h-12 rounded-full p-1 bg-gradient-to-r from-[#FC8E1C] via-[#FED8B1] to-[#FC8E1C]">
-              <div className="bg-black/70 w-full h-full rounded-full"></div>
+              <div className="bg-black/70 w-full h-full rounded-full">
+                <img
+                  src="/plane.png"
+                  alt="Airplane"
+                  className="w-7 pt-1.5 mr-1.5 h-auto object-cover"
+                />
+              </div>
             </div>
             <h3 className="text-xl font-semibold mb-4">
-              {language === "ar" ? "الخدمة الثالثة" : "Third Feature"}
+              {language === "ar" ? "أسعار منافسة" : "Competitive Prices"}
             </h3>
             <p>
               {language === "ar"
-                ? "وصف الخدمة الثالثة"
-                : "Description of Third Feature"}
+                ? "عروض مميزة وتخفيضات حصرية للمجموعات والعائلات"
+                : "Special offers and exclusive discounts for groups and families."}
             </p>
           </div>
         </div>

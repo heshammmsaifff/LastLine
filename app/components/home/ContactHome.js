@@ -42,7 +42,7 @@ export default function ContactHome() {
               </span>
               <span className="relative flex items-center justify-center bg-[#d9d9d9] px-4 py-3 text-[#F6A653] transition-all duration-300 group-hover:bg-black group-hover:text-[#F6A653]">
                 <ArrowRight
-                  className={`h-6 w-6 transition-all duration-300 ${
+                  className={`h-7 w-6 transition-all duration-300 ${
                     isRTL
                       ? "rotate-180 group-hover:-translate-x-1"
                       : "group-hover:translate-x-1"
@@ -73,7 +73,13 @@ export default function ContactHome() {
 
         {/* Mobile Layout */}
         <motion.div
-          className="flex flex-col items-center md:hidden w-full gap-4 bg-gradient-to-r from-orange-200 to-orange-400 rounded-lg p-6"
+          className="flex flex-col items-center md:hidden w-full gap-4 rounded-lg p-6"
+          style={{
+            backgroundImage: `url('/contact-h.svg')`, // **Path to your SVG file**
+            backgroundSize: "cover", // **To make the image cover the container**
+            backgroundPosition: "center", // **To center the image**
+            backgroundRepeat: "no-repeat", // **To prevent repetition**
+          }}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -108,7 +114,7 @@ export default function ContactHome() {
               </span>
               <span className="relative flex items-center justify-center bg-[#d9d9d9] px-4 py-3 text-[#F6A653] transition-all duration-300 group-hover:bg-black group-hover:text-[#F6A653]">
                 <ArrowRight
-                  className={`h-6 w-6 transition-all duration-300 ${
+                  className={`h-7 w-6 transition-all duration-300 ${
                     isRTL
                       ? "rotate-180 group-hover:-translate-x-1"
                       : "group-hover:translate-x-1"

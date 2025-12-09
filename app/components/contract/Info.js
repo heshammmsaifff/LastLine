@@ -48,34 +48,42 @@ export default function Info() {
       bg: "#FED8B1",
     },
     {
-      titleAr: "كارت.",
-      titleEn: "Card",
-      descAr: "وصف الكارت.",
-      descEn: "Card description",
+      titleAr: "أعمال النجارة.",
+      titleEn: "Carpentry works.",
+      descAr:
+        "تنفيذ جميع الأعمال الخشبية، بما في ذلك الأبواب والنوافذ والأثاث، بلمسات إبداعية و دقة متناهية.",
+      descEn:
+        "Executing all woodworking tasks, including doors, windows, and furniture, with creative touches and meticulous precision.",
       img: "cards/05.svg",
       bg: "#FED8B1",
     },
     {
-      titleAr: "كارت.",
-      titleEn: "Card",
-      descAr: "وصف الكارت.",
-      descEn: "Card description",
+      titleAr: "تمديدات السباكة والكهرباء.",
+      titleEn: "Plumbing and electrical installations.",
+      descAr:
+        "تصميم و تنفيذ المباني السكنية والتجارية و الصناعية، بأعلي معايير الجودة و الالتزام.",
+      descEn:
+        "Design and construction of residential, commercial, and industrial buildings, with the highest standards of quality and commitment.",
       img: "cards/06.svg",
       bg: "#FDC081",
     },
     {
-      titleAr: "كارت.",
-      titleEn: "Card",
-      descAr: "وصف الكارت.",
-      descEn: "Card description",
+      titleAr: "الشدات المعدنية.",
+      titleEn: "Metal formwork.",
+      descAr:
+        "تصميم وتركيب الشدات المعدنية لتوفير الاستقرار والأمان خلال مراحل البناء المختلفة.",
+      descEn:
+        "Design and installation of metal formwork to provide stability and safety during various construction stages.",
       img: "cards/07.svg",
       bg: "#FDC081",
     },
     {
-      titleAr: "كارت.",
-      titleEn: "Card",
-      descAr: "وصف الكارت.",
-      descEn: "Card description",
+      titleAr: "الإستشارات الهندسية.",
+      titleEn: "Engineering consultations.",
+      descAr:
+        "نخبة من المهندسين يقدمون استشارات متخصصة لضمان سير العمل وفق الخطط الموضوعه وبأعلي مستوي من الكفاءة.",
+      descEn:
+        "A team of elite engineers providing specialized consultations to ensure work proceeds according to established plans and with the highest level of efficiency.",
       img: "cards/08.svg",
       bg: "#FED8B1",
     },

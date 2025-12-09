@@ -78,126 +78,147 @@ export default function ContactForm() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className=" mb-10 max-w-3xl mx-auto bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-lg"
-    >
-      <h2 className="text-3xl font-bold text-center mb-8">
-        {language === "ar" ? "تواصل معنا" : "Contact Us"}
-      </h2>
-
-      <div className="grid md:grid-cols-2 gap-6">
-        <div>
-          <label className="block mb-2 font-semibold">
-            {language === "ar" ? "الاسم *" : "Name *"}
-          </label>
-          <input
-            type="text"
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            className="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:ring-2 focus:ring-amber-300 outline-none transition"
-            required
-          />
-        </div>
-
-        <div>
-          <label className="block mb-2 font-semibold">
-            {language === "ar" ? "رقم الهاتف *" : "Phone *"}
-          </label>
-          <input
-            type="text"
-            name="phone"
-            value={form.phone}
-            onChange={handleChange}
-            className="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:ring-2 focus:ring-amber-300 outline-none transition"
-            required
-          />
-        </div>
-
-        <div>
-          <label className="block mb-2 font-semibold">
-            {language === "ar" ? "البريد الإلكتروني" : "Email"}
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            className="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:ring-2 focus:ring-amber-300 outline-none transition"
-          />
-        </div>
-
-        <div>
-          <label className="block mb-2 font-semibold">
-            {language === "ar" ? "الموضوع *" : "Subject *"}
-          </label>
-          <select
-            name="subject"
-            value={form.subject}
-            onChange={handleChange}
-            className="w-full p-3 rounded-lg bg-white/20 text-black border border-white/30 focus:ring-2 focus:ring-amber-300 outline-none transition"
-            required
-          >
-            <option value="" className="bg-black/20">
-              {language === "ar" ? "اختر الموضوع" : "Select a subject"}
-            </option>
-            <option
-              className="bg-black/20"
-              value={
-                language === "ar" ? "المقاولات العامة" : "General Contracting"
-              }
-            >
-              {language === "ar" ? "المقاولات العامة" : "General Contracting"}
-            </option>
-            <option
-              className="bg-black/20"
-              value={language === "ar" ? "السفر و السياحة" : "Travel & Tourism"}
-            >
-              {language === "ar" ? "السفر و السياحة" : "Travel & Tourism"}
-            </option>
-            <option
-              className="bg-black/20"
-              value={
-                language === "ar"
-                  ? "الدعاية و الاعلان"
-                  : "Advertising & Marketing"
-              }
-            >
-              {language === "ar"
-                ? "الدعاية و الاعلان"
-                : "Advertising & Marketing"}
-            </option>
-          </select>
-        </div>
-      </div>
-
-      <div className="mt-6">
-        <label className="block mb-2 font-semibold">
-          {language === "ar" ? "الرسالة" : "Message"}
-        </label>
-        <textarea
-          name="message"
-          value={form.message}
-          onChange={handleChange}
-          rows={5}
-          className="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:ring-2 focus:ring-amber-300 outline-none transition"
-        ></textarea>
-      </div>
-
-      <button
-        type="submit"
-        disabled={loading}
-        className="mt-6 w-full cursor-pointer bg-amber-300 text-black font-semibold py-3 rounded-lg hover:bg-amber-400 transition"
+    <>
+      <header className="mb-5">
+        <h1 className="text-4xl font-bold text-center mb-4">
+          {language === "ar" ? "نحن هنا لمساعدتك" : "We Are Here To Help You"}
+        </h1>
+        <p className="text-center text-lg max-w-2xl mx-auto">
+          {language === "ar"
+            ? "إذا كان لديك أي أسئلة أو استفسارات، لا تتردد في التواصل معنا من خلال النموذج أدناه."
+            : "If you have any questions or inquiries, feel free to reach out to us using the form below."}
+        </p>
+      </header>
+      <form
+        onSubmit={handleSubmit}
+        className="mb-10 max-w-4xl w-[90%] mx-auto bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-lg"
       >
-        {loading
-          ? language === "ar"
-            ? "جاري الإرسال..."
-            : "Sending..."
-          : language === "ar"
-          ? "إرسال"
-          : "Send"}
-      </button>
-    </form>
+        <h2 className="text-3xl font-bold text-center mb-8">
+          {language === "ar" ? "تواصل معنا" : "Contact Us"}
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <div>
+            <label className="block mb-2 font-semibold">
+              {language === "ar" ? "الاسم *" : "Name *"}
+            </label>
+            <input
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              className="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:ring-2 focus:ring-amber-300 outline-none transition"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block mb-2 font-semibold">
+              {language === "ar" ? "رقم الهاتف *" : "Phone *"}
+            </label>
+            <input
+              type="text"
+              name="phone"
+              value={form.phone}
+              onChange={handleChange}
+              className="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:ring-2 focus:ring-amber-300 outline-none transition"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block mb-2 font-semibold">
+              {language === "ar" ? "البريد الإلكتروني" : "Email"}
+            </label>
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              className="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:ring-2 focus:ring-amber-300 outline-none transition"
+            />
+          </div>
+
+          <div>
+            <label className="block mb-2 font-semibold">
+              {language === "ar" ? "الموضوع *" : "Subject *"}
+            </label>
+            <select
+              name="subject"
+              value={form.subject}
+              onChange={handleChange}
+              className="w-full p-3 rounded-lg bg-white/20 text-black border border-white/30 focus:ring-2 focus:ring-amber-300 outline-none transition"
+              required
+            >
+              <option value="" className="bg-black/20">
+                {language === "ar" ? "اختر الموضوع" : "Select a subject"}
+              </option>
+              <option
+                className="bg-black/20"
+                value={
+                  language === "ar" ? "المقاولات العامة" : "General Contracting"
+                }
+              >
+                {language === "ar" ? "المقاولات العامة" : "General Contracting"}
+              </option>
+              <option
+                className="bg-black/20"
+                value={
+                  language === "ar" ? "السفر و السياحة" : "Travel & Tourism"
+                }
+              >
+                {language === "ar" ? "السفر و السياحة" : "Travel & Tourism"}
+              </option>
+              <option
+                className="bg-black/20"
+                value={
+                  language === "ar"
+                    ? "الدعاية و الاعلان"
+                    : "Advertising & Marketing"
+                }
+              >
+                {language === "ar"
+                  ? "الدعاية و الاعلان"
+                  : "Advertising & Marketing"}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div className="mt-6">
+          <label className="block mb-2 font-semibold">
+            {language === "ar" ? "الرسالة" : "Message"}
+          </label>
+          <textarea
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            rows={5}
+            className="w-full p-3 rounded-lg bg-white/20 border border-white/30 focus:ring-2 focus:ring-amber-300 outline-none transition"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          disabled={loading}
+          className="mt-6 w-full cursor-pointer bg-amber-300 text-black font-semibold py-3 rounded-lg hover:bg-amber-400 transition"
+        >
+          {loading
+            ? language === "ar"
+              ? "جاري الإرسال..."
+              : "Sending..."
+            : language === "ar"
+            ? "إرسال"
+            : "Send"}
+        </button>
+      </form>
+      <div className="mb-10 w-[70%] items-center text-center mx-auto bg-amber-300/10 backdrop-blur-md border border-amber-300/20 rounded-2xl p-4 shadow-lg">
+        <p className="text-center text-lg text-white/90">
+          {language === "ar"
+            ? "بعد الضغط على زر الإرسال، سيتم التواصل معك في أقرب وقت ممكن."
+            : "After clicking the send button, we will contact you as soon as possible."}
+        </p>
+      </div>
+    </>
   );
 }

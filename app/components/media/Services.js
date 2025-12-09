@@ -29,31 +29,39 @@ const servicesData = [
     icon: FaYoutube({ size: 40, color: "#000" }),
   },
   {
-    titleAr: "خدمة 3",
-    titleEn: "Service 3",
-    descriptionAr: "وصف الخدمة الثالثة باللغة العربية.",
-    descriptionEn: "Description of the third service in English.",
+    titleAr: "تزويد متابعين إنستجرام",
+    titleEn: "Instagram Followers Boost",
+    descriptionAr:
+      "مع خبرتنا التي تتجاوز السبع سنوات في مجال التسويق عبر وسائل التواصل الإجتماعي، نقدم خدمة تزويد متابعين انستجرام بشكل استراتيجي ومستهدف، نعمل علي بناء جمهور حقيقي يعزز تأثير حسابكم ويعزز وجودكم الرقمي.",
+    descriptionEn:
+      "With over seven years of experience in social media marketing, we offer a strategic and targeted Instagram followers boosting service. We focus on building a genuine audience that enhances your account's influence and strengthens your digital presence.",
     icon: FaInstagram({ size: 40, color: "#000" }),
   },
   {
-    titleAr: "خدمة 4",
-    titleEn: "Service 4",
-    descriptionAr: "وصف الخدمة الرابعة باللغة العربية.",
-    descriptionEn: "Description of the fourth service in English.",
+    titleAr: "تزويد متابعين صفحات فيسبوك",
+    titleEn: "Facebook Page Followers Boost",
+    descriptionAr:
+      "تعد خدمة تزويد متابعين صفحات فيسبوك جزءاً من تخصصنا، حيث نقدم نهجاً متكاملاً لتعزيز شهرتكم وتفاعل الجمهور، نتبني استراتيجيات فعالة لزيادة عدد المتابعين بشكل آمن ومستدام.",
+    descriptionEn:
+      "The Facebook Page Followers Boost service is part of our expertise, where we provide a comprehensive approach to enhance your visibility and audience engagement. We adopt effective strategies to increase your follower count safely and sustainably.",
     icon: FaFacebookF({ size: 40, color: "#000" }),
   },
   {
-    titleAr: "خدمة 5",
-    titleEn: "Service 5",
-    descriptionAr: "وصف الخدمة الخامسة باللغة العربية.",
-    descriptionEn: "Description of the fifth service in English.",
+    titleAr: "تزويد متابعين حسابات فيسبوك",
+    titleEn: "Facebook Account Followers Boost",
+    descriptionAr:
+      "بمهارتنا الإحترافية والخبرة الواسعة، نقدم خدمة تزويد متابعات لحسابات الأفراد بطريقة تعزز النشاط الرقمي الشخصي، نحن نفهم أهمية التفاعل الحقيقي، ونعمل علي جلب متابعين يساهمون في تحقيق أهدافكم بشكل فعال.",
+    descriptionEn:
+      "With our professional skills and extensive experience, we offer a Facebook account followers boosting service that enhances personal digital activity. We understand the importance of genuine engagement and work to attract followers who effectively contribute to achieving your goals.",
     icon: FaFacebookSquare({ size: 40, color: "#000" }),
   },
   {
-    titleAr: "خدمة 6",
-    titleEn: "Service 6",
-    descriptionAr: "وصف الخدمة السادسة باللغة العربية.",
-    descriptionEn: "Description of the sixth service in English.",
+    titleAr: "البرمجيات",
+    titleEn: "Software",
+    descriptionAr:
+      "خدمة برمجية شاملة تلبي احتياجات عملك علي الإنترنت بشكل احترافي وفعال، نتميز بفريق من المطورين المتخصصين الذين يمتلكون خبرة واسعة في تصميم وتطوير المواقع التعريفية والمتاجر الإلكترونية، وصفحات البيع الإحترافية، والقوائم الرقمية.",
+    descriptionEn:
+      "A comprehensive software service that meets your online business needs professionally and effectively. We boast a team of specialized developers with extensive experience in designing and developing informational websites, e-commerce stores, professional sales pages, and digital catalogs.",
     icon: FaCode({ size: 40, color: "#000" }),
   },
 ];

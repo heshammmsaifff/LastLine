@@ -21,3 +21,15 @@
 /* * {
   outline: 1px solid red !important;
 } */
+
+body {
+  font-family: var(--font-arabic);
+}
+
+:lang(en) {
+  font-family: var(--font-english);
+}
+
+*:lang(en) {
+  font-family: var(--font-english);
+}

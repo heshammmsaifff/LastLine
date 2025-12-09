@@ -46,8 +46,8 @@ const translations = {
     about: {
       heading: "الـخــط الأخــيــر\n القــــابــــضــــة",
       subheading:
-        "مؤسسة الخط الأخير للمقاولات تلتزم بتقديم أعلى جودة في جميع مشاريعها، بفضل فريق متكامل من المهندسين والمشرفين المحترفين وذوي الخبرة الواسعة.",
-      body: "بإدارة نخبة من الخبراء في مجال المقاولات، نهتم بالوصول إلى أعلى مستويات التنفيذ بما يتناسب مع تطلعات العملاء.",
+        "مؤسسة الخط الأخير القابضة تلتزم بتقديم أعلى جودة في جميع مشاريعها، بفضل فريق متكامل من المهندسين والمشرفين المحترفين وذوي الخبرة الواسعة.",
+      body: "بإدارة نخبة من الخبراء نهتم بالوصول إلى أعلى مستويات التنفيذ بما يتناسب مع تطلعات العملاء.",
       cta: "اقرأ المزيد",
     },
     services: {
@@ -147,8 +147,8 @@ const translations = {
     about: {
       heading: "Last Line Holding",
       subheading:
-        "Last Line Contracting delivers uncompromising quality across every project, powered by a complete team of seasoned engineers and supervisors.",
-      body: "Led by elite experts in the contracting domain, we pursue the highest execution standards to match client aspirations.",
+        "Last Line Holding delivers uncompromising quality across every project, powered by a complete team of seasoned engineers and supervisors.",
+      body: "Led by elite experts, we pursue the highest execution standards to match client aspirations.",
       cta: "Read More",
     },
     services: {
@@ -225,20 +225,39 @@ export function LanguageProvider({ children }) {
   const [language, setLanguage] = useState("ar");
   const [fabOpen, setFabOpen] = useState(false);
 
-  const toggleLanguage = () =>
-    setLanguage((prev) => (prev === "ar" ? "en" : "ar"));
-
+  // Load saved language OR read device language
   useEffect(() => {
+    const saved = localStorage.getItem("site-lang");
+
+    if (saved) {
+      setLanguage(saved);
+    } else {
+      const deviceLang = navigator.language || navigator.userLanguage || "en";
+
+      if (deviceLang.startsWith("ar")) {
+        setLanguage("ar");
+      } else {
+        setLanguage("en");
+      }
+    }
+  }, []);
+
+  // Save language & update HTML tag
+  useEffect(() => {
+    localStorage.setItem("site-lang", language);
     document.documentElement.lang = language;
     document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
   }, [language]);
+
+  const toggleLanguage = () =>
+    setLanguage((prev) => (prev === "ar" ? "en" : "ar"));
 
   const value = useMemo(
     () => ({ language, toggleLanguage, t: translations[language] }),
     [language]
   );
 
-  const whatsappNumber = "201092141964"; // number with code without +
+  const whatsappNumber = "201092141964";
   const whatsappMessage = encodeURIComponent(value.t.fabMessage);
 
   return (

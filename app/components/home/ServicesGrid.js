@@ -12,7 +12,7 @@ export default function ServicesGrid() {
   const services = [
     {
       title: isRTL ? "المقاولات العامة" : "General Contracting",
-      image: "/contract.jpg",
+      image: "/heroco.jpg",
       link: "/contracting",
     },
     {
@@ -22,7 +22,7 @@ export default function ServicesGrid() {
     },
     {
       title: isRTL ? "الدعاية و الاعلان" : "Marketing & Advertising",
-      image: "/marketing.jpg",
+      image: "/media.jpg",
       link: "/media",
     },
   ];
