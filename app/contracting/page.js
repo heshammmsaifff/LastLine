@@ -6,6 +6,20 @@ import Info from "../components/contract/Info";
 import Features from "../components/contract/Features";
 import ContactHome from "../components/home/ContactHome";
 
+export const metadata = {
+  title: "الخط الأخير - المقاولات العامة",
+  description: "المقاولات العامة مؤسسة الخط الأخير القابضة",
+  keywords: [
+    "الخط الأخير",
+    "المدونة",
+    "الأخبار",
+    "مقالات",
+    "Last Line",
+    "Blog",
+    "Updates",
+  ],
+};
+
 export default function page() {
   return (
     <>

@@ -6,6 +6,21 @@ import Info from "../components/media/Info";
 import Services from "../components/media/Services";
 import ContactHome from "../components/home/ContactHome";
 
+export const metadata = {
+  title: "الخط الأخير - الدعاية والإعلان",
+  description: "الخط الأخير القابضة للدعاية و الإعلان",
+  keywords: [
+    "الخط الأخير",
+    "المدونة",
+    "الدعاية و الإعلان",
+    "الأخبار",
+    "مقالات",
+    "Last Line",
+    "Blog",
+    "Updates",
+  ],
+};
+
 export default function page() {
   return (
     <>
