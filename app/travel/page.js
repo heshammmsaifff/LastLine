@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Hero from "../components/travel/Hero";
 import WhyUs from "../components/travel/WhyUs";
+import Activities from "../components/travel/Activities";
 import ContactHome from "../components/home/ContactHome";
 
 export const metadata = {
@@ -29,6 +30,7 @@ export default function page() {
       </div>
       <div className="relative z-10">
         <WhyUs />
+        <Activities />
         <ContactHome />
         <Footer />
       </div>
