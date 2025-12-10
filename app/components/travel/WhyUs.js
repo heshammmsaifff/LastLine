@@ -18,11 +18,11 @@ export default function WhyUs() {
       </div>
       {/* features */}
       <div className="flex flex-col pb-15 justify-center items-center space-y-6 mt-10 lg:px-8">
-        <img
+        {/* <img
           src="/plane.png"
           alt="Airplane"
           className="mb-9 w-30 h-30 object-cover animate-none"
-        />
+        /> */}
         {/* Feature 1 */}
         <div className="w-[90%] rotate-2 lg:w-1/2 rounded-[20px] p-[3px] bg-gradient-to-r from-[#FC8E1C] via-[#FED8B1] to-[#FC8E1C] shadow-lg">
           {/* Content */}

@@ -27,8 +27,7 @@ export default function Activities() {
       },
       skiing: {
         title: "Skiing Adventure",
-        description:
-          "Glide through snowy mountains for an unforgettable winter fun.",
+        description: "Glide through sandy mountains for an unforgettable fun.",
       },
     },
     ar: {
@@ -47,7 +46,7 @@ export default function Activities() {
       },
       skiing: {
         title: "مغامرة التزلج",
-        description: "انطلق فوق الجبال الثلجية لقضاء وقت لا يُنسى.",
+        description: "انطلق فوق الجبال الرملية لقضاء وقت لا يُنسى.",
       },
     },
   };
@@ -77,7 +76,7 @@ export default function Activities() {
       key: "skiing",
       title: langSet.skiing.title,
       description: langSet.skiing.description,
-      img: "/skiing.avif",
+      img: "/skiing1.avif",
     },
   ];
 

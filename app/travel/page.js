@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/travel/Hero";
 import WhyUs from "../components/travel/WhyUs";
 import Activities from "../components/travel/Activities";
+import Destinations from "../components/travel/Destinations";
 import ContactHome from "../components/home/ContactHome";
 
 export const metadata = {
@@ -29,6 +30,7 @@ export default function page() {
         <Hero />
       </div>
       <div className="relative z-10">
+        <Destinations />
         <WhyUs />
         <Activities />
         <ContactHome />
