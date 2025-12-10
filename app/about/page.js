@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Hero from "../components/about/Hero";
 import VisionMission from "../components/about/VisionMission";
+import ContactHome from "../components/home/ContactHome";
 
 export const metadata = {
   title: "الخط الأخير - معلومات عنّا",
@@ -33,6 +34,7 @@ export default function page() {
         <div className="relative z-10">
           <Hero />
           <VisionMission />
+          <ContactHome />
           <Footer />
         </div>
       </div>

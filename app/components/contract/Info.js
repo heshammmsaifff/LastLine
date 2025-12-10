@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useLanguage } from "../../context/LanguageContext";
+import { motion } from "framer-motion";
 
 export default function Info() {
   const { t, language } = useLanguage();
@@ -105,9 +106,13 @@ export default function Info() {
       </div>
 
       {/* card */}
-      <div className="grid grid-cols-1  md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {cards.map((card, index) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }} // فقط يظهر مرة واحدة عند الوصول ل30% من الكارت
+            transition={{ duration: 0.9, delay: 0.2 * index }}
             key={index}
             className={`flex flex-col md:flex-row-reverse items-center gap-6 rounded-[30px] p-6 shadow-lg`}
             style={{ backgroundColor: card.bg }}
@@ -118,7 +123,7 @@ export default function Info() {
               className="w-[216px] h-[118px] object-cover object-top pt-4 mb-5 rounded-xl flex-shrink-0"
             />
 
-            <div className="text-black flex-1 ">
+            <div className="text-black flex-1">
               <h3 className="text-2xl font-bold mb-3">
                 {language === "ar" ? card.titleAr : card.titleEn}
               </h3>
@@ -127,7 +132,7 @@ export default function Info() {
                 {language === "ar" ? card.descAr : card.descEn}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
