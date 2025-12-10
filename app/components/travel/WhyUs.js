@@ -30,11 +30,11 @@ export default function WhyUs() {
           <div className="bg-black/70 backdrop-blur-md w-full h-full rounded-[17px] p-6 text-center text-white">
             <div className="absolute -top-5 -left-5 w-12 h-12 rounded-full p-1 bg-gradient-to-r from-[#FC8E1C] via-[#FED8B1] to-[#FC8E1C]">
               <div className="bg-black/70 w-full h-full rounded-full">
-                <img
+                {/* <img
                   src="/plane.png"
                   alt="Airplane"
                   className="w-7 pt-1.5 mr-1.5 h-auto object-cover"
-                />
+                /> */}
               </div>
             </div>
             <h3 className="text-xl font-semibold mb-4">
@@ -53,11 +53,11 @@ export default function WhyUs() {
           <div className="bg-black/70 backdrop-blur-md w-full h-full rounded-[17px] p-6 text-center text-white">
             <div className="absolute -top-5 -right-5 w-12 h-12 rounded-full p-1 bg-gradient-to-r from-[#FC8E1C] via-[#FED8B1] to-[#FC8E1C]">
               <div className="bg-black/70 w-full h-full rounded-full">
-                <img
+                {/* <img
                   src="/plane.png"
                   alt="Airplane"
                   className="w-7 pt-1.5 mr-1.5 h-auto object-cover"
-                />
+                /> */}
               </div>
             </div>
             <h3 className="text-xl font-semibold mb-4">
@@ -78,11 +78,11 @@ export default function WhyUs() {
           <div className="bg-black/70 backdrop-blur-md w-full h-full rounded-[17px] p-6 text-center text-white">
             <div className="absolute -top-5 -left-5 w-12 h-12 rounded-full p-1 bg-gradient-to-r from-[#FC8E1C] via-[#FED8B1] to-[#FC8E1C]">
               <div className="bg-black/70 w-full h-full rounded-full">
-                <img
+                {/* <img
                   src="/plane.png"
                   alt="Airplane"
                   className="w-7 pt-1.5 mr-1.5 h-auto object-cover"
-                />
+                /> */}
               </div>
             </div>
             <h3 className="text-xl font-semibold mb-4">
