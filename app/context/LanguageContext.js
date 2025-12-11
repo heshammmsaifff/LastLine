@@ -257,7 +257,7 @@ export function LanguageProvider({ children }) {
     [language]
   );
 
-  const whatsappNumber = "201092141964";
+  const whatsappNumber = "966558010282";
   const whatsappMessage = encodeURIComponent(value.t.fabMessage);
 
   return (
