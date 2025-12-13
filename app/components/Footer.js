@@ -2,12 +2,9 @@
 
 import Image from "next/image";
 import { useLanguage } from "../context/LanguageContext";
-import {
-  FaFacebookF,
-  FaSnapchat,
-  FaXTwitter,
-  FaWhatsapp,
-} from "react-icons/fa6";
+import { FaFacebookF, FaTiktok } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+
 import Link from "next/link";
 
 export default function Footer() {
@@ -50,28 +47,25 @@ export default function Footer() {
 
           <div className="flex gap-5 text-2xl">
             <Link
-              href="#"
+              href="https://www.facebook.com/share/1AKEABT55w/?mibextid=wwXIfr"
               aria-label="Facebook"
               className="hover:text-blue-600"
             >
               <FaFacebookF />
             </Link>
             <Link
-              href="#"
+              href="https://www.tiktok.com/@lastline2020?_r=1&_t=ZS-92BzrcRA7AV"
               aria-label="Snapchat"
-              className="hover:text-yellow-200"
+              className="hover:text-red-500"
             >
-              <FaSnapchat />
-            </Link>
-            <Link href="#" aria-label="X" className="hover:text-gray-600">
-              <FaXTwitter />
+              <FaTiktok />
             </Link>
             <Link
-              href="#"
-              aria-label="WhatsApp"
-              className="hover:text-green-600"
+              href="https://www.instagram.com/last__line2?igsh=M2I1bmd2emR0b2Fj"
+              aria-label="X"
+              className="hover:text-red-700"
             >
-              <FaWhatsapp />
+              <FaInstagram />
             </Link>
           </div>
         </div>

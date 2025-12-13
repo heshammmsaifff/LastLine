@@ -284,13 +284,13 @@ export function LanguageProvider({ children }) {
         {value.t.floatingToggle}
       </button>
 
-      {/* FAB العائم */}
-      <div className="fixed bottom-10 right-10 z-50 flex flex-col items-end">
+      {/* FAB */}
+      <div className="fixed bottom-7 left-10 z-30 flex flex-col items-end">
         <button
           onClick={() => setFabOpen((prev) => !prev)}
           className="w-16 h-16 rounded-full bg-amber-500 text-black flex items-center justify-center shadow-lg hover:bg-amber-600 transition relative z-50"
         >
-          <FiPlus className="text-3xl" />
+          <FiPlus className="text-4xl" />
         </button>
 
         <AnimatePresence>
@@ -299,7 +299,7 @@ export function LanguageProvider({ children }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              className="flex flex-col items-end mb-4 space-y-4 absolute bottom-full right-0"
+              className="flex flex-col items-end mb-2 space-y-2 absolute bottom-full right-0"
             >
               <Link
                 href="/contact"
